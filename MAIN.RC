@@ -1,0 +1,838 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "main.h"
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Polish resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_PLK)
+#ifdef _WIN32
+LANGUAGE LANG_POLISH, SUBLANG_DEFAULT
+#pragma code_page(1250)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""main.h""\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""main.rcv""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAINDIALOG DIALOGEX 0, 0, 393, 153
+STYLE DS_CENTER | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Exit",IDCANCEL,320,27,70,20,0,WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "Run the &game...",IDC_RUNGAME,320,75,70,20,0,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    PUSHBUTTON      "&Revert to saved",IDC_REVERTBUTTON,320,104,70,20,
+                    WS_DISABLED,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    DEFPUSHBUTTON   "&Save",IDC_SAVEBUTTON,320,129,70,20,WS_DISABLED,
+                    WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    CONTROL         "Tab1",IDC_MAINTAB,"SysTabControl32",TCS_MULTILINE | 
+                    TCS_RAGGEDRIGHT | WS_TABSTOP,5,4,310,145
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,320,99,
+                    70,1,WS_EX_STATICEDGE
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 306, 117
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Midnight Editor 06.2a",IDC_TITLE,50,5,245,15
+    LTEXT           "Copyright © 1997 Marcin Wichary. With thanks to Flemming Sorvin.",
+                    IDC_STATIC,50,50,245,10
+    LTEXT           "X-COM: Apocalypse",IDC_GAMETITLE,49,20,250,15
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,51,40,250,1,
+                    WS_EX_STATICEDGE
+    CONTROL         "Internal revision 1.01. X-COM: Apocalypse is copyright © MicroProse.",
+                    IDC_COPYRIGHT,"Static",SS_LEFTNOWORDWRAP | WS_GROUP,49,
+                    109,246,8
+    CONTROL         125,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,5,5,40,110
+    LTEXT           "Comments, ideas etc. to",IDC_STATIC,50,71,80,10
+    LTEXT           "Check out me.tme.szczecin.pl for updates, sources and more informations.",
+                    IDC_STATIC,50,87,35,10
+    LTEXT           "for updates and informations.",IDC_STATIC,199,87,100,10
+    PUSHBUTTON      "mwichary@polbox.com",IDC_MAIL,130,68,85,15,BS_FLAT,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "http://midnight.tme.szczecin.pl",IDC_WWW,85,84,110,15,
+                    BS_FLAT,WS_EX_STATICEDGE
+END
+
+IDD_SAVEGAME DIALOGEX 0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "&Open savegame...",IDC_OPENBUTTON,190,37,110,14
+    RTEXT           "Selected savegame:",IDC_STATIC,5,4,70,10
+    PUSHBUTTON      "Open &last modified savegame",IDC_LASTSAVEBUTTON,190,56,
+                    110,14,WS_DISABLED
+    CONTROL         "(no savegame selected)",IDC_SAVENAME,"Static",
+                    SS_LEFTNOWORDWRAP | SS_NOPREFIX | WS_DISABLED | WS_GROUP,
+                    81,4,219,10
+    RTEXT           "Game time:",IDC_STATIC,5,24,70,10
+    CONTROL         "()",IDC_SAVETIME,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_DISABLED | WS_GROUP,81,24,219,10
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME | SS_SUNKEN,190,75,
+                    109,1,WS_EX_STATICEDGE
+    PUSHBUTTON      "&Backup to .BAK file",IDC_BACKUPBAKBUTTON,190,81,110,14,
+                    WS_DISABLED
+    PUSHBUTTON      "Restore &from .BAK file",IDC_RESTOREBAKBUTTON,190,100,
+                    110,14,WS_DISABLED
+    CONTROL         137,IDC_STATIC,"Static",SS_BITMAP | SS_SUNKEN,5,71,48,44,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE | 
+                    WS_EX_STATICEDGE
+    RTEXT           "Description:",IDC_STATIC,5,14,70,10
+    CONTROL         "()",IDC_SAVEDESCRIPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_DISABLED | WS_GROUP,81,14,220,10
+END
+
+IDD_GENERAL DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         ":",IDC_STATIC9,"Static",SS_LEFTNOWORDWRAP | WS_DISABLED | 
+                    WS_GROUP,70,54,8,8
+    CONTROL         ":",IDC_STATIC10,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_DISABLED | WS_GROUP,100,54,8,8
+    RTEXT           "&Cash:",IDC_STATIC1,91,6,19,8,WS_DISABLED
+    EDITTEXT        IDC_CASHEDIT,116,4,60,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Max it!",IDC_MAX,181,4,30,12,WS_DISABLED
+    RTEXT           "&Date:",IDC_STATIC5,8,34,30,8,WS_DISABLED
+    COMBOBOX        IDC_WEEKDAYCOMBO,43,32,65,89,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_DAYCOMBO,123,32,40,89,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_MONTHCOMBO,168,32,65,89,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_YEAREDIT,238,32,50,13,ES_AUTOHSCROLL
+    RTEXT           "&Time:",IDC_STATIC8,8,54,30,8,WS_DISABLED
+    EDITTEXT        IDC_HOUREDIT,43,52,25,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MINUTEEDIT,73,52,25,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SECONDEDIT,103,52,25,13,ES_AUTOHSCROLL
+    RTEXT           "&Week:",IDC_STATIC6,131,54,28,8,WS_DISABLED
+    EDITTEXT        IDC_WEEKEDIT,164,52,39,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Update save time",IDC_UPDATESAVETIME,211,51,76,15,
+                    WS_DISABLED
+    RTEXT           "&Base:",IDC_STATIC3,90,83,20,8,WS_DISABLED
+    COMBOBOX        IDC_BASECOMBO,115,81,95,71,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Finish",IDC_FINISH,13,100,32,15,BS_CENTER | 
+                    WS_DISABLED
+    LTEXT           "all facilities being built in that base. You can also",
+                    IDC_STATIC2,48,103,159,8,WS_DISABLED
+    PUSHBUTTON      "dig m&ore corridors",IDC_DIG,204,100,66,15,BS_CENTER | 
+                    WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,65,73,174,1
+    LTEXT           "there.",IDC_STATIC4,274,103,19,8,WS_DISABLED
+    LTEXT           ",",IDC_STATIC7,113,34,8,8,WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,65,23,174,1
+END
+
+IDD_AVVEHICLES DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Stock &vehicles:",IDC_STATIC3,5,2,50,8,WS_DISABLED
+    LISTBOX         IDC_VEHICLELIST,5,12,120,83,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Quantity:",IDC_STATIC1,160,45,45,8,WS_DISABLED
+    EDITTEXT        IDC_QUANTITY,210,43,55,12,ES_AUTOHSCROLL
+    RTEXT           "&Price:",IDC_STATIC2,160,60,45,8,WS_DISABLED
+    EDITTEXT        IDC_PRICE,210,58,55,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Copy data to other vehicles",IDC_COPYAVVEHICLES,5,100,
+                    120,14,WS_DISABLED
+END
+
+IDD_STORES DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Items:",IDC_STATIC4,5,2,20,8,WS_DISABLED
+    LISTBOX         IDC_ITEMLIST,5,12,135,83,LBS_USETABSTOPS | 
+                    LBS_NOINTEGRALHEIGHT | WS_DISABLED | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Base:",IDC_STATIC1,265,2,35,8,WS_DISABLED
+    COMBOBOX        IDC_BASECOMBO,145,12,155,85,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Category:",IDC_STATIC2,250,27,50,8,WS_DISABLED
+    COMBOBOX        IDC_CATEGORYCOMBO,145,37,155,50,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,145,62,155,1
+    RTEXT           "&Quantity:",IDC_STATIC3,167,79,45,8,WS_DISABLED
+    EDITTEXT        IDC_QUANTITY,217,77,55,12,ES_AUTOHSCROLL
+    LTEXT           "Copy data to other items",IDC_STATIC5,11,103,78,8,
+                    WS_DISABLED
+    PUSHBUTTON      "in this c&ategory",IDC_COPYCATEGORY,93,100,66,14,
+                    WS_DISABLED
+    PUSHBUTTON      "in this bas&e",IDC_COPYTHISBASE,162,100,66,14,
+                    WS_DISABLED
+    PUSHBUTTON      "in a&ll bases",IDC_COPYALLBASES,231,100,66,14,
+                    WS_DISABLED
+END
+
+IDD_PEOPLE1 DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Person:",IDC_STATIC1,75,7,30,8,WS_DISABLED
+    COMBOBOX        IDC_PERSONCOMBO,111,5,115,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Name:",IDC_STATIC2,75,27,30,8,WS_DISABLED
+    EDITTEXT        IDC_NAMEEDIT,111,25,115,12,ES_AUTOHSCROLL
+    RTEXT           "Function:",IDC_STATIC3,75,40,30,8,WS_DISABLED
+    LTEXT           "",IDC_FUNCTION,111,40,149,8,WS_DISABLED
+    LTEXT           "P&hoto:",IDC_STATIC4,7,45,22,8,WS_DISABLED
+    LISTBOX         IDC_PHOTOLIST,7,55,291,60,LBS_OWNERDRAWFIXED | 
+                    LBS_NOINTEGRALHEIGHT | LBS_MULTICOLUMN | 
+                    LBS_DISABLENOSCROLL | WS_DISABLED | WS_HSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,65,21,175,1
+END
+
+IDD_PEOPLE2 DIALOGEX 0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    RTEXT           "&Person:",IDC_STATIC1,10,6,30,8,WS_DISABLED
+    COMBOBOX        IDC_PERSONCOMBO,46,4,115,90,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Copy data to all people",IDC_COPYPERSON,212,3,86,15,
+                    BS_CENTER | BS_VCENTER | BS_MULTILINE | WS_DISABLED
+    RTEXT           "Ra&nk:",IDC_STATIC2,10,27,30,8,WS_DISABLED
+    COMBOBOX        IDC_RANKCOMBO,46,25,95,84,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Attribute:",IDC_STATIC3,10,49,29,8,WS_DISABLED
+    COMBOBOX        IDC_ATTRIBUTECOMBO,46,47,95,70,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Max them!",IDC_MAX,145,47,38,13,WS_DISABLED
+    RTEXT           "&Was:",IDC_STATIC4,9,66,26,8,WS_DISABLED
+    CONTROL         "Slider6",IDC_WASSLIDER,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_DISABLED | WS_TABSTOP,40,63,106,15
+    RTEXT           "&Is:",IDC_STATIC5,9,81,26,8,WS_DISABLED
+    CONTROL         "Slider6",IDC_ISSLIDER,"msctls_trackbar32",TBS_TOP | 
+                    TBS_NOTICKS | WS_DISABLED | WS_TABSTOP,40,78,106,15
+    RTEXT           "&Orders:",IDC_STATIC9,195,24,105,8,WS_DISABLED
+    CONTROL         "Slider1",IDC_ORDERSSLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_TOP | WS_DISABLED | WS_TABSTOP,195,
+                    73,97,19
+    RTEXT           "&Days service:",IDC_STATIC6,36,104,45,8,WS_DISABLED
+    EDITTEXT        IDC_DAYSSERVICEEDIT,86,102,38,12,ES_AUTOHSCROLL
+    RTEXT           "&Kills:",IDC_STATIC7,126,104,20,8,WS_DISABLED
+    EDITTEXT        IDC_KILLSEDIT,151,102,38,12,ES_AUTOHSCROLL
+    RTEXT           "Missi&ons:",IDC_STATIC8,191,104,35,8,WS_DISABLED
+    EDITTEXT        IDC_MISSIONSEDIT,231,102,38,12,ES_AUTOHSCROLL
+    LTEXT           "70",IDC_WASVALUE,150,65,20,8,WS_DISABLED
+    LTEXT           "100",IDC_ISVALUE,150,81,25,8,WS_DISABLED
+    CONTROL         228,IDC_STATIC,"Static",SS_BITMAP,195,33,105,39,
+                    WS_EX_STATICEDGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,21,295,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,95,294,1
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,42,179,1
+END
+
+IDD_RESEARCH DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Projects:",IDC_STATIC1,5,2,28,8,WS_DISABLED
+    LISTBOX         IDC_PROJECTLIST,5,12,125,83,LBS_NOINTEGRALHEIGHT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Copy data to other projects",IDC_COPYPROJECT,5,100,125,
+                    14,WS_DISABLED
+    RTEXT           "Category:",IDC_STATIC2,135,15,60,8,WS_DISABLED
+    LTEXT           "",IDC_CATEGORY,201,15,95,8,WS_DISABLED
+    RTEXT           "UFOpaedia topics:",IDC_STATIC3,135,25,60,8,WS_DISABLED
+    LTEXT           "",IDC_TOPIC1,201,25,95,8,WS_DISABLED
+    LTEXT           "",IDC_TOPIC2,201,35,95,8,WS_DISABLED
+    LTEXT           "",IDC_TOPIC3,201,45,99,8,WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,135,60,165,1
+    LTEXT           "Pr&ogress:",IDC_STATIC4,141,70,30,8,WS_DISABLED
+    RTEXT           "%",IDC_PROGRESSPERC,265,70,30,8,WS_DISABLED
+    CONTROL         "Slider1",IDC_PROGRESSSLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_DISABLED | WS_TABSTOP,135,80,165,19
+    CONTROL         "&Finished",IDC_FINISHED,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,195,100,42,10
+END
+
+IDD_VEHICLES DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Vehicles:",IDC_STATIC1,5,6,30,8,WS_DISABLED
+    LISTBOX         IDC_VEHICLELIST,5,16,130,83,LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_DISABLED | 
+                    WS_VSCROLL | WS_TABSTOP
+    RTEXT           "&Name:",IDC_STATIC7,0,105,29,8,WS_DISABLED
+    EDITTEXT        IDC_CARNAMEEDIT,34,103,101,12,ES_AUTOHSCROLL
+    RTEXT           "&Owner:",IDC_STATIC6,145,17,44,8,WS_DISABLED
+    COMBOBOX        IDC_OWNERCOMBO,194,12,105,120,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    RTEXT           "&Constitution:",IDC_STATIC4,145,36,44,8,WS_DISABLED
+    EDITTEXT        IDC_CONSTITUTIONEDIT,194,34,70,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "&Max it!",IDC_MAX,269,34,30,12,WS_DISABLED
+    LTEXT           "&Equipment:",IDC_STATIC2,145,54,36,8,WS_DISABLED
+    LISTBOX         IDC_EQUIPMENTLIST,145,64,155,35,LBS_NOINTEGRALHEIGHT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    RTEXT           "Rounds/&fuel:",IDC_STATIC3,205,105,50,8,WS_DISABLED
+    EDITTEXT        IDC_ROUNDSEDIT,260,103,40,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,145,49,155,1
+    RTEXT           "Type:",IDC_STATIC5,145,2,44,8,WS_DISABLED
+    LTEXT           "",IDC_VEHTYPE,195,2,102,8
+END
+
+IDD_READING DIALOG DISCARDABLE  0, 0, 127, 38
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Reading data...",IDC_STATIC,5,15,120,8
+END
+
+IDD_WRITING DIALOG DISCARDABLE  0, 0, 127, 38
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    CTEXT           "Writing data...",IDC_STATIC,5,15,120,8
+END
+
+IDD_ORGANIZATIONS DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "2nd parameter:",IDC_INFO4,106,91,44,8,WS_DISABLED
+    RTEXT           "2nd parameter:",IDC_INFO2,110,39,40,8,WS_DISABLED
+    LTEXT           "&Relations between:",IDC_STATIC1,5,5,77,8,WS_DISABLED
+    COMBOBOX        IDC_1STORGANIZATIONCOMBO,5,15,105,120,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&and:",IDC_STATIC2,5,35,13,8,WS_DISABLED
+    COMBOBOX        IDC_2NDORGANIZATIONCOMBO,5,45,105,120,CBS_DROPDOWNLIST | 
+                    CBS_OWNERDRAWFIXED | CBS_HASSTRINGS | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Copy first->second\nto first->all",IDC_COPYFIRST,5,76,
+                    65,19,BS_CENTER | BS_VCENTER | BS_MULTILINE | 
+                    WS_DISABLED
+    PUSHBUTTON      "C&opy second->first\nto second->all",IDC_COPYSECOND,5,
+                    97,65,19,BS_MULTILINE | WS_DISABLED
+    LTEXT           "&First to second organization:",IDC_STATIC3,159,5,134,8,
+                    WS_DISABLED
+    CONTROL         "Slider1",IDC_RELATION11,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_DISABLED | WS_TABSTOP,154,15,130,20
+    CONTROL         "Slider1",IDC_RELATION12,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_DISABLED | WS_TABSTOP,154,35,130,20
+    LTEXT           "S&econd to first organization:",IDC_STATIC4,159,55,90,8,
+                    WS_DISABLED
+    CONTROL         "Slider1",IDC_RELATION21,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_DISABLED | WS_TABSTOP,154,65,130,20
+    CONTROL         "Slider1",IDC_RELATION22,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_DISABLED | WS_TABSTOP,154,86,130,20
+    PUSHBUTTON      "hostile",IDC_SET1,149,107,25,9,WS_DISABLED
+    PUSHBUTTON      "neutral",IDC_SET2,207,107,25,9,WS_DISABLED
+    PUSHBUTTON      "friendly",IDC_SET3,264,107,25,9,WS_DISABLED
+    LTEXT           "0",IDC_VALUE11,285,17,20,8,WS_DISABLED
+    LTEXT           "0",IDC_VALUE12,285,38,20,8,WS_DISABLED
+    LTEXT           "0",IDC_VALUE21,285,68,20,8,WS_DISABLED
+    LTEXT           "0",IDC_VALUE22,285,90,20,8,WS_DISABLED
+    RTEXT           "1st parameter:",IDC_INFO1,115,18,35,8,WS_DISABLED
+    RTEXT           "1st parameter:",IDC_INFO3,106,69,44,8,WS_DISABLED
+END
+
+IDD_OPENTEMPLATE DIALOG DISCARDABLE  0, 0, 237, 33
+STYLE DS_3DLOOK | DS_CONTROL | DS_CENTER | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Description:",IDC_STATIC1,5,10,40,8,WS_DISABLED
+    LTEXT           "Game time:",IDC_STATIC2,5,20,40,8,WS_DISABLED
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,5,0,205,1
+    CONTROL         "",IDC_SAVEDESCRIPTION,"Static",SS_LEFTNOWORDWRAP | 
+                    SS_NOPREFIX | WS_GROUP,55,10,155,8
+    CONTROL         "",IDC_SAVETIME,"Static",SS_LEFTNOWORDWRAP | SS_NOPREFIX | 
+                    WS_GROUP,55,20,155,8
+END
+
+IDD_RUNTHEGAME DIALOG DISCARDABLE  0, 0, 247, 82
+STYLE DS_MODALFRAME | DS_CENTER | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Run"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EXENAME,7,21,235,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,82,61,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,137,61,50,14
+    PUSHBUTTON      "&Browse...",IDC_BROWSE,192,61,50,14
+    CTEXT           "Midnight Editor is about to run the following file:",
+                    IDC_STATIC,7,5,235,8
+    CTEXT           "Make any changes if necessary and press OK button to load the game.",
+                    IDC_STATIC,7,40,235,8
+END
+
+IDD_FACILITIES DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "&Facility:",IDC_STATIC3,5,2,52,8,WS_DISABLED
+    LISTBOX         IDC_FACILITYLIST,5,12,130,67,LBS_NOINTEGRALHEIGHT | 
+                    WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Restore original facility &data",IDC_RESTOREFACILITY,5,
+                    83,130,14,WS_DISABLED
+    PUSHBUTTON      "&Copy data to other facilities",IDC_COPYFACILITY,5,100,
+                    130,14,WS_DISABLED
+    CONTROL         "C&an be built?",IDC_CANBEBUILTCHECK,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_DISABLED | WS_TABSTOP,
+                    181,24,57,10
+    RTEXT           "C&ost to build:",IDC_STATIC4,169,37,55,8,WS_DISABLED
+    EDITTEXT        IDC_COSTTOBUILDEDIT,229,36,40,12,ES_AUTOHSCROLL
+    RTEXT           "Da&ys to build:",IDC_STATIC5,169,52,55,8,WS_DISABLED
+    EDITTEXT        IDC_DAYSTOBUILDEDIT,229,51,40,12,ES_AUTOHSCROLL
+    RTEXT           "&Maintenance cost:",IDC_STATIC6,159,67,65,8,WS_DISABLED
+    EDITTEXT        IDC_MAINTENANCECOSTEDIT,229,66,40,12,ES_AUTOHSCROLL
+    RTEXT           "Ca&pacity:",IDC_STATIC7,159,83,65,8,WS_DISABLED
+    EDITTEXT        IDC_CAPACITYEDIT,229,81,40,12,ES_AUTOHSCROLL
+END
+
+IDD_INFORMATION DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Welcome to Midnight Editor for X-COM: Apocalypse! This editor is designed to modify almost every aspect of strategical (non-mission) game.",
+                    IDC_STATIC,5,10,291,20
+    LTEXT           "Please note:",IDC_STATIC,5,35,40,8
+    LTEXT           "1. Corridors digging may cause some problems during base-defending missions.",
+                    IDC_STATIC,5,50,248,8
+    LTEXT           "2. You probably won't be able to equip vehicles marked with red bars (either if you make them available in ""Stock vehicles"" window or change the owner to X-COM in ""Vehicles"" window) - the game likes to hang when you try to do so.",
+                    IDC_STATIC,5,60,295,25
+    LTEXT           "You can, however, successfully send them to destroy some buildings or other vehicles.",
+                    IDC_STATIC,5,84,272,8
+    LTEXT           "3. I haven't thoroughly tested the results of relations modification, so change them at own risk!",
+                    IDC_STATIC,5,95,300,8
+END
+
+IDD_SCORE DIALOG DISCARDABLE  0, 0, 306, 116
+STYLE DS_CONTROL | WS_CHILD | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    RTEXT           "&Tactical missions:",IDC_STATIC1,5,15,105,8,WS_DISABLED
+    EDITTEXT        IDC_WEEKEDIT1,125,13,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOTALEDIT1,200,13,60,12,ES_AUTOHSCROLL
+    RTEXT           "R&esearch completed:",IDC_STATIC2,5,30,105,8,
+                    WS_DISABLED
+    EDITTEXT        IDC_WEEKEDIT2,125,28,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOTALEDIT2,200,28,60,12,ES_AUTOHSCROLL
+    RTEXT           "&Alien incidents in city:",IDC_STATIC3,5,45,105,8,
+                    WS_DISABLED
+    EDITTEXT        IDC_WEEKEDIT3,125,43,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOTALEDIT3,200,43,60,12,ES_AUTOHSCROLL
+    RTEXT           "&UFOs shot down:",IDC_STATIC4,5,60,105,8,WS_DISABLED
+    EDITTEXT        IDC_WEEKEDIT4,125,58,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOTALEDIT4,200,58,60,12,ES_AUTOHSCROLL
+    RTEXT           "&X-COM craft shot down:",IDC_STATIC5,5,75,105,8,
+                    WS_DISABLED
+    EDITTEXT        IDC_WEEKEDIT5,125,73,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOTALEDIT5,200,73,60,12,ES_AUTOHSCROLL
+    RTEXT           "U&FO incursions:",IDC_STATIC6,5,90,105,8,WS_DISABLED
+    EDITTEXT        IDC_WEEKEDIT6,125,88,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOTALEDIT6,200,88,60,12,ES_AUTOHSCROLL
+    RTEXT           "&Damage to city:",IDC_STATIC7,5,105,105,8,WS_DISABLED
+    EDITTEXT        IDC_WEEKEDIT7,125,103,60,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TOTALEDIT7,200,103,60,12,ES_AUTOHSCROLL
+    CTEXT           "Week",IDC_STATIC8,125,2,60,8,WS_DISABLED
+    CTEXT           "Total",IDC_STATIC9,200,2,60,8,WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAINDIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 392
+        BOTTOMMARGIN, 143
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_SAVEGAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_AVVEHICLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_STORES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_PEOPLE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_PEOPLE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_RESEARCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_VEHICLES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_READING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 120
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 31
+    END
+
+    IDD_WRITING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 120
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 31
+    END
+
+    IDD_ORGANIZATIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_OPENTEMPLATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 230
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 26
+    END
+
+    IDD_RUNTHEGAME, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 240
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_FACILITIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_INFORMATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+
+    IDD_SCORE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 109
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_DDTLOGO             BITMAP  DISCARDABLE     "DDTPowrd.bmp"
+IDB_MELOGO              BITMAP  DISCARDABLE     "MELogo.bmp"
+IDB_ORDERS              BITMAP  DISCARDABLE     "Orders.bmp"
+IDB_BITMAP1             BITMAP  DISCARDABLE     "Faces\\00.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "Faces\\01.bmp"
+IDB_BITMAP3             BITMAP  DISCARDABLE     "Faces\\02.bmp"
+IDB_BITMAP4             BITMAP  DISCARDABLE     "Faces\\03.bmp"
+IDB_BITMAP5             BITMAP  DISCARDABLE     "Faces\\04.bmp"
+IDB_BITMAP6             BITMAP  DISCARDABLE     "Faces\\05.bmp"
+IDB_BITMAP7             BITMAP  DISCARDABLE     "Faces\\06.bmp"
+IDB_BITMAP8             BITMAP  DISCARDABLE     "Faces\\07.bmp"
+IDB_BITMAP9             BITMAP  DISCARDABLE     "Faces\\08.bmp"
+IDB_BITMAP10            BITMAP  DISCARDABLE     "Faces\\09.bmp"
+IDB_BITMAP11            BITMAP  DISCARDABLE     "Faces\\10.bmp"
+IDB_BITMAP12            BITMAP  DISCARDABLE     "Faces\\11.bmp"
+IDB_BITMAP13            BITMAP  DISCARDABLE     "Faces\\12.bmp"
+IDB_BITMAP14            BITMAP  DISCARDABLE     "Faces\\13.bmp"
+IDB_BITMAP15            BITMAP  DISCARDABLE     "Faces\\14.bmp"
+IDB_BITMAP16            BITMAP  DISCARDABLE     "Faces\\15.bmp"
+IDB_BITMAP17            BITMAP  DISCARDABLE     "Faces\\16.bmp"
+IDB_BITMAP18            BITMAP  DISCARDABLE     "Faces\\17.bmp"
+IDB_BITMAP19            BITMAP  DISCARDABLE     "Faces\\18.bmp"
+IDB_BITMAP20            BITMAP  DISCARDABLE     "Faces\\19.bmp"
+IDB_BITMAP21            BITMAP  DISCARDABLE     "Faces\\20.bmp"
+IDB_BITMAP22            BITMAP  DISCARDABLE     "Faces\\21.bmp"
+IDB_BITMAP23            BITMAP  DISCARDABLE     "Faces\\22.bmp"
+IDB_BITMAP24            BITMAP  DISCARDABLE     "Faces\\23.bmp"
+IDB_BITMAP25            BITMAP  DISCARDABLE     "Faces\\24.bmp"
+IDB_BITMAP26            BITMAP  DISCARDABLE     "Faces\\25.bmp"
+IDB_BITMAP27            BITMAP  DISCARDABLE     "Faces\\26.bmp"
+IDB_BITMAP28            BITMAP  DISCARDABLE     "Faces\\27.bmp"
+IDB_BITMAP29            BITMAP  DISCARDABLE     "Faces\\28.bmp"
+IDB_BITMAP30            BITMAP  DISCARDABLE     "Faces\\29.bmp"
+IDB_BITMAP31            BITMAP  DISCARDABLE     "Faces\\30.bmp"
+IDB_BITMAP32            BITMAP  DISCARDABLE     "Faces\\31.bmp"
+IDB_BITMAP33            BITMAP  DISCARDABLE     "Faces\\32.bmp"
+IDB_BITMAP34            BITMAP  DISCARDABLE     "Faces\\33.bmp"
+IDB_BITMAP35            BITMAP  DISCARDABLE     "Faces\\34.bmp"
+IDB_BITMAP36            BITMAP  DISCARDABLE     "Faces\\35.bmp"
+IDB_BITMAP37            BITMAP  DISCARDABLE     "Faces\\36.bmp"
+IDB_BITMAP38            BITMAP  DISCARDABLE     "Faces\\37.bmp"
+IDB_BITMAP39            BITMAP  DISCARDABLE     "Faces\\38.bmp"
+IDB_BITMAP40            BITMAP  DISCARDABLE     "Faces\\39.bmp"
+IDB_BITMAP41            BITMAP  DISCARDABLE     "Faces\\40.bmp"
+IDB_BITMAP42            BITMAP  DISCARDABLE     "Faces\\41.bmp"
+IDB_BITMAP43            BITMAP  DISCARDABLE     "Faces\\42.bmp"
+IDB_BITMAP44            BITMAP  DISCARDABLE     "Faces\\43.bmp"
+IDB_BITMAP45            BITMAP  DISCARDABLE     "Faces\\44.bmp"
+IDB_BITMAP46            BITMAP  DISCARDABLE     "Faces\\45.bmp"
+IDB_BITMAP47            BITMAP  DISCARDABLE     "Faces\\46.bmp"
+IDB_BITMAP48            BITMAP  DISCARDABLE     "Faces\\47.bmp"
+IDB_BITMAP49            BITMAP  DISCARDABLE     "Faces\\48.bmp"
+IDB_BITMAP50            BITMAP  DISCARDABLE     "Faces\\49.bmp"
+IDB_BITMAP51            BITMAP  DISCARDABLE     "Faces\\50.bmp"
+IDB_BITMAP52            BITMAP  DISCARDABLE     "Faces\\51.bmp"
+IDB_BITMAP53            BITMAP  DISCARDABLE     "Faces\\52.bmp"
+IDB_BITMAP54            BITMAP  DISCARDABLE     "Faces\\53.bmp"
+IDB_BITMAP55            BITMAP  DISCARDABLE     "Faces\\54.bmp"
+IDB_BITMAP56            BITMAP  DISCARDABLE     "Faces\\55.bmp"
+IDB_BITMAP57            BITMAP  DISCARDABLE     "Faces\\56.bmp"
+IDB_BITMAP58            BITMAP  DISCARDABLE     "Faces\\57.bmp"
+IDB_BITMAP59            BITMAP  DISCARDABLE     "Faces\\58.bmp"
+IDB_BITMAP60            BITMAP  DISCARDABLE     "Faces\\59.bmp"
+IDB_BITMAP61            BITMAP  DISCARDABLE     "Faces\\60.bmp"
+IDB_BITMAP62            BITMAP  DISCARDABLE     "Faces\\61.bmp"
+IDB_BITMAP63            BITMAP  DISCARDABLE     "Faces\\62.bmp"
+IDB_BITMAP64            BITMAP  DISCARDABLE     "Faces\\63.bmp"
+IDB_BITMAP65            BITMAP  DISCARDABLE     "Faces\\64.bmp"
+IDB_BITMAP66            BITMAP  DISCARDABLE     "Faces\\65.bmp"
+IDB_BITMAP67            BITMAP  DISCARDABLE     "Faces\\66.bmp"
+IDB_BITMAP68            BITMAP  DISCARDABLE     "Faces\\67.bmp"
+IDB_BITMAP69            BITMAP  DISCARDABLE     "Faces\\68.bmp"
+IDB_BITMAP70            BITMAP  DISCARDABLE     "Faces\\69.bmp"
+IDB_BITMAP71            BITMAP  DISCARDABLE     "Faces\\70.bmp"
+IDB_BITMAP72            BITMAP  DISCARDABLE     "Faces\\71.bmp"
+IDB_BITMAP73            BITMAP  DISCARDABLE     "Faces\\72.bmp"
+IDB_BITMAP74            BITMAP  DISCARDABLE     "Faces\\73.bmp"
+IDB_BITMAP75            BITMAP  DISCARDABLE     "Faces\\74.bmp"
+IDB_ORG0                BITMAP  DISCARDABLE     "Orgs\\00.bmp"
+IDB_ORG1                BITMAP  DISCARDABLE     "Orgs\\01.bmp"
+IDB_ORG2                BITMAP  DISCARDABLE     "Orgs\\02.bmp"
+IDB_ORG3                BITMAP  DISCARDABLE     "Orgs\\03.bmp"
+IDB_ORG4                BITMAP  DISCARDABLE     "Orgs\\04.bmp"
+IDB_ORG5                BITMAP  DISCARDABLE     "Orgs\\05.bmp"
+IDB_ORG6                BITMAP  DISCARDABLE     "Orgs\\06.bmp"
+IDB_ORG7                BITMAP  DISCARDABLE     "Orgs\\07.bmp"
+IDB_ORG8                BITMAP  DISCARDABLE     "Orgs\\08.bmp"
+IDB_ORG9                BITMAP  DISCARDABLE     "Orgs\\09.bmp"
+IDB_ORG10               BITMAP  DISCARDABLE     "Orgs\\10.bmp"
+IDB_ORG11               BITMAP  DISCARDABLE     "Orgs\\11.bmp"
+IDB_ORG12               BITMAP  DISCARDABLE     "Orgs\\12.bmp"
+IDB_ORG13               BITMAP  DISCARDABLE     "Orgs\\13.bmp"
+IDB_ORG14               BITMAP  DISCARDABLE     "Orgs\\14.bmp"
+IDB_ORG15               BITMAP  DISCARDABLE     "Orgs\\15.bmp"
+IDB_ORG16               BITMAP  DISCARDABLE     "Orgs\\16.bmp"
+IDB_ORG17               BITMAP  DISCARDABLE     "Orgs\\17.bmp"
+IDB_ORG18               BITMAP  DISCARDABLE     "Orgs\\18.bmp"
+IDB_ORG19               BITMAP  DISCARDABLE     "Orgs\\19.bmp"
+IDB_ORG20               BITMAP  DISCARDABLE     "Orgs\\20.bmp"
+IDB_ORG21               BITMAP  DISCARDABLE     "Orgs\\21.bmp"
+IDB_ORG22               BITMAP  DISCARDABLE     "Orgs\\22.bmp"
+IDB_ORG23               BITMAP  DISCARDABLE     "Orgs\\23.bmp"
+IDB_ORG24               BITMAP  DISCARDABLE     "Orgs\\24.bmp"
+IDB_ORG25               BITMAP  DISCARDABLE     "Orgs\\25.bmp"
+IDB_ORG26               BITMAP  DISCARDABLE     "Orgs\\26.bmp"
+IDB_ORG27               BITMAP  DISCARDABLE     "Orgs\\27.bmp"
+IDB_VEHICLE0            BITMAP  DISCARDABLE     "Vehicles\\00.bmp"
+IDB_VEHICLE1            BITMAP  DISCARDABLE     "Vehicles\\01.bmp"
+IDB_VEHICLE2            BITMAP  DISCARDABLE     "Vehicles\\02.bmp"
+IDB_VEHICLE3            BITMAP  DISCARDABLE     "Vehicles\\03.bmp"
+IDB_VEHICLE4            BITMAP  DISCARDABLE     "Vehicles\\04.bmp"
+IDB_VEHICLE5            BITMAP  DISCARDABLE     "Vehicles\\05.bmp"
+IDB_VEHICLE6            BITMAP  DISCARDABLE     "Vehicles\\06.bmp"
+IDB_VEHICLE7            BITMAP  DISCARDABLE     "Vehicles\\07.bmp"
+IDB_VEHICLE8            BITMAP  DISCARDABLE     "Vehicles\\08.bmp"
+IDB_VEHICLE9            BITMAP  DISCARDABLE     "Vehicles\\09.bmp"
+IDB_VEHICLE10           BITMAP  DISCARDABLE     "Vehicles\\10.bmp"
+IDB_VEHICLE11           BITMAP  DISCARDABLE     "Vehicles\\11.bmp"
+IDB_VEHICLE12           BITMAP  DISCARDABLE     "Vehicles\\12.bmp"
+IDB_VEHICLE13           BITMAP  DISCARDABLE     "Vehicles\\13.bmp"
+IDB_VEHICLE14           BITMAP  DISCARDABLE     "Vehicles\\14.bmp"
+IDB_VEHICLE15           BITMAP  DISCARDABLE     "Vehicles\\15.bmp"
+IDB_VEHICLE16           BITMAP  DISCARDABLE     "Vehicles\\16.bmp"
+IDB_VEHICLE17           BITMAP  DISCARDABLE     "Vehicles\\17.bmp"
+IDB_VEHICLE18           BITMAP  DISCARDABLE     "Vehicles\\18.bmp"
+IDB_VEHICLE19           BITMAP  DISCARDABLE     "Vehicles\\19.bmp"
+IDB_VEHICLE20           BITMAP  DISCARDABLE     "Vehicles\\20.bmp"
+IDB_VEHICLE21           BITMAP  DISCARDABLE     "Vehicles\\21.bmp"
+IDB_VEHICLE22           BITMAP  DISCARDABLE     "Vehicles\\22.bmp"
+IDB_VEHICLE23           BITMAP  DISCARDABLE     "Vehicles\\23.bmp"
+IDB_VEHICLE24           BITMAP  DISCARDABLE     "Vehicles\\24.bmp"
+IDB_VEHICLE25           BITMAP  DISCARDABLE     "Vehicles\\25.bmp"
+IDB_VEHICLE26           BITMAP  DISCARDABLE     "Vehicles\\26.bmp"
+IDB_VEHICLE27           BITMAP  DISCARDABLE     "Vehicles\\27.bmp"
+IDB_VEHICLE28           BITMAP  DISCARDABLE     "Vehicles\\28.bmp"
+IDB_VEHICLE29           BITMAP  DISCARDABLE     "Vehicles\\29.bmp"
+IDB_VEHICLE30           BITMAP  DISCARDABLE     "Vehicles\\30.bmp"
+IDB_VEHICLE31           BITMAP  DISCARDABLE     "Vehicles\\31.bmp"
+IDB_VEHICLE32           BITMAP  DISCARDABLE     "Vehicles\\32.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON1               ICON    DISCARDABLE     "icon1.ico"
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "000004b0"
+        BEGIN
+            VALUE "CompanyName", "(no company)\0"
+            VALUE "FileDescription", "Midnight Editor 06.2a: X-COM: Apocalypse\0"
+            VALUE "FileVersion", "Internal Revision 1.01\0"
+            VALUE "InternalName", "ME062\0"
+            VALUE "LegalCopyright", "Copyright © 1997 Marcin Wichary\0"
+            VALUE "OriginalFilename", "MEXCOMAp.exe\0"
+            VALUE "ProductName", "Midnight Editor 06.2a: X-COM: Apocalypse\0"
+            VALUE "ProductVersion", "Internal Revision 1.01\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0, 1200
+    END
+END
+
+#endif    // !_MAC
+
+#endif    // Polish resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "main.rcv"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
